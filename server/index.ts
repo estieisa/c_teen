@@ -30,6 +30,7 @@ app.use(
     credentials: true,
     origin: 'https://c-teen.vercel.app',
     maxAge: 2592000,
+    allowedHeaders:"Access-Control-Allow-Origin"
   })
 );
 
