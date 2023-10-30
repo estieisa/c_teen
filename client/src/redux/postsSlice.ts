@@ -28,7 +28,7 @@ const initialState: PostsState = {
 const fetchPosts = createAsyncThunk("posts/getAllPosts", async () => {
   try {
     const response = await axiosInstance.get(
-      "https://cteen-api.onrender.com/posts/getAllPosts",
+      "https://c-teen-api.vercel.app/posts/getAllPosts",
       { withCredentials: true }
     );
     return response.data.postsArr;
@@ -40,7 +40,7 @@ const fetchPosts = createAsyncThunk("posts/getAllPosts", async () => {
 const fetchUpdateUsersEvent = createAsyncThunk("posts/updateUsersEvent", async (post:Post) => {
   try {
     const response = await axiosInstance.put(
-      "https://cteen-api.onrender.com/posts/updateUsersEvent",
+      "https://c-teen-api.vercel.app/posts/updateUsersEvent",
       {post},
       { withCredentials: true }
     );
@@ -53,7 +53,7 @@ const fetchUpdateUsersEvent = createAsyncThunk("posts/updateUsersEvent", async (
 const fetchDeletePost = createAsyncThunk("posts/deletePost", async (postId:string | number) => {
   try {
     const response = await axiosInstance.put(
-      "https://cteen-api.onrender.com/posts/deletePost",
+      "https://c-teen-api.vercel.app/posts/deletePost",
       {postId},
       { withCredentials: true }
     );
