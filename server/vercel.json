@@ -4,6 +4,11 @@
       { "src": "*.js", "use": "@vercel/node" }
     ],
     "routes": [
+        {
+          "src": "/redirect",
+          "status": 308,
+          "headers": { "Location": "https://example.com/" }
+        },
         { "src": "/(.*)", "dest": "/" }
       ]
     
