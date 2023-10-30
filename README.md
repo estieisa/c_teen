@@ -8,7 +8,7 @@ Admin side - the admin will be able to manage the organization - users, events, 
 
 ## Installation steps:
 client:
-1. `cd client/my-app`, then - `npm i`
+1. `cd client`, then - `npm i`
 2. run `npm start`
 server: 
 1. `cd server`, then - `npm i`
