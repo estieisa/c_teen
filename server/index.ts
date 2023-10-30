@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 app.use(
   cors({
     credentials: true,
-    origin: true,
+    origin: 'https://c-teen.vercel.app',
     maxAge: 2592000,
   })
 );
