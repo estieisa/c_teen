@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 import {  Request, Response } from "express";
 import { getAuth } from "firebase-admin/auth";
-import { bucket, db } from "../index";
+import { bucket, db } from "..";
 
 import { checkAdminStatus } from "../middleWare/authorization";
 const expiresIn = 15 * 60 * 60 * 1000; //15 h
@@ -28,7 +28,7 @@ export const signInUser = async (req: any, res: Response) => {
         );
 
       const isAdmin = await checkAdminStatus(req);
-      res.end(JSON.stringify({ status: "login successfully", isAdmin }));
+      // res.end(JSON.stringify({ status: "login successfully", isAdmin }));
     }
   } catch (err) {
     res.status(401).send(err + "unauthorization");

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { bucket, db } from "../index";
+import { bucket, db } from "..";
 import { uploadFileToStorage } from "../middleWare/uploadFileToStorage";
 
 export const newPost = async (req: any, res: Response) => {
