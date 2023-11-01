@@ -17,7 +17,7 @@ export default function InstagramPosts() {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get(`https://c-teen.vercel.app/api/instagram-posts`);
+      const response = await axios.get(`instagram-posts`);
       console.log(response.data);
       setPosts(response.data.data);
     } catch (error) {

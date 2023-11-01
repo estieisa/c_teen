@@ -50,7 +50,7 @@ const initialAuthState: AuthState = {
 const fetchUser = createAsyncThunk("users/UserProfile", async () => {
   try {
     const response = await axiosInstance.get(
-      "https://c-teen.vercel.app/api/users/userProfile",
+      "users/userProfile",
       { withCredentials: true }
     );
     return response.data;
@@ -62,7 +62,7 @@ const fetchUser = createAsyncThunk("users/UserProfile", async () => {
 const fetchUsers = createAsyncThunk("users/getAllUsers", async () => {
   try {
     const response = await axios.get(
-      "https://c-teen.vercel.app/api/users/getAllUsers",
+      "users/getAllUsers",
       { withCredentials: true }
     );
     console.log(response.data)
@@ -75,7 +75,7 @@ const fetchUsers = createAsyncThunk("users/getAllUsers", async () => {
 const fetchUpdateUser = createAsyncThunk("users/updateUser", async (data: object | string) => {
   try {
     const response = await axiosInstance.put(
-      "https://c-teen.vercel.app/api/users/updateUser",
+      "users/updateUser",
       data,
       { withCredentials: true }
     );
@@ -88,7 +88,7 @@ const fetchUpdateUser = createAsyncThunk("users/updateUser", async (data: object
 const fetchUpdateEventsUser = createAsyncThunk("users/updateEventsUser", async (post:Post) => {
   try {
     const response = await axiosInstance.put(
-      "https://c-teen.vercel.app/api/users/updateEventsUser",
+      "users/updateEventsUser",
       {post},
       { withCredentials: true }
     );
@@ -101,7 +101,7 @@ const fetchUpdateEventsUser = createAsyncThunk("users/updateEventsUser", async (
 const fetchDeleteUser = createAsyncThunk("users/deleteUser", async (userId:string | number) => {
   try {
     const response = await axiosInstance.put(
-      "https://c-teen.vercel.app/api/users/deleteUser",
+      "users/deleteUser",
       {userId},
       { withCredentials: true }
     );
@@ -114,7 +114,7 @@ const fetchDeleteUser = createAsyncThunk("users/deleteUser", async (userId:strin
 const fetchDeleteEventUser = createAsyncThunk("users/deleteEventUser", async (post:Post) => {
   try {
     const response = await axiosInstance.put(
-      "https://c-teen.vercel.app/api/users/deleteEventUser",
+      "users/deleteEventUser",
       {post},
       { withCredentials: true }
     );

@@ -16,7 +16,7 @@ export default function SignOut() {
       .then(() => {
         axiosInstance
           .post(
-            "https://c-teen.vercel.app/api/users/signOutUser",
+            "users/signOutUser",
             {},
             { withCredentials: true }
           )

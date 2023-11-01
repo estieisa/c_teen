@@ -21,7 +21,7 @@ export default function SignInWithGoogle() {
           .then((token) => {
             axiosInstance({
               method: "post",
-              url: "https://c-teen.vercel.app/api/users/signIn",
+              url: "users/signIn",
               withCredentials: true,
               headers: { Authorization: "Bearer " + token },
             })
