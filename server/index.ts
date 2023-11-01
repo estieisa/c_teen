@@ -24,14 +24,14 @@ export const bucket = admin.storage().bucket();
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(
-  cors({
-    credentials: true,
-    origin: ['https://c-teen.vercel.app', 'http://localhost:3000', 'https://c-teen.vercel.app/api/posts/getAllPosts', 'https://c-teen.vercel.app/api/instagram-posts'],
-    maxAge: 2592000,
-    allowedHeaders:"Access-Control-Allow-Origin"
-  })
-);
+// app.use(
+//   cors({
+//     credentials: true,
+//     origin: ['https://c-teen.vercel.app', 'http://localhost:3000', 'https://c-teen.vercel.app/api/posts/getAllPosts', 'https://c-teen.vercel.app/api/instagram-posts'],
+//     maxAge: 2592000,
+//     allowedHeaders:"Access-Control-Allow-Origin"
+//   })
+// );
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'https://c-teen.vercel.app/api/instagram-posts');
