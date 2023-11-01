@@ -2,13 +2,13 @@
 "version":2,
 "builds":[
     {
-        "src":"nodemon index.ts",
+        "src":"*.ts",
         "use":"@vercel/node"
     }
 ],
 "routes":[
     {
-        "src":"/(.*)",
+        "src":"/(*)",
         "dest":"/"
     }
 ]    
