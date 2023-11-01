@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 app.use(
   cors({
     credentials: true,
-    origin: ['https://c-teen.vercel.app', 'http://localhost:3000'],
+    origin: ['https://c-teen.vercel.app', 'http://localhost:3000', 'https://c-teen.vercel.app/api/posts/getAllPosts'],
     maxAge: 2592000,
     allowedHeaders:"Access-Control-Allow-Origin"
   })
