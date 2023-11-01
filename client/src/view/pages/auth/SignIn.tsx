@@ -34,7 +34,7 @@ export default function SignIn() {
         user.getIdToken().then((token) => {
           axiosInstance({
             method: "post",
-            url: "users/signIn",
+            url: "/users/signIn",
             data: user,
             withCredentials: true,
             headers: { Authorization: "Bearer " + token },

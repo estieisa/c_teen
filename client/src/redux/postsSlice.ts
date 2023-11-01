@@ -25,10 +25,10 @@ const initialState: PostsState = {
   error: "",
 };
 
-const fetchPosts = createAsyncThunk("posts/getAllPosts", async () => {
+const fetchPosts = createAsyncThunk("/posts/getAllPosts", async () => {
   try {
     const response = await axiosInstance.get(
-      "posts/getAllPosts",
+      "/posts/getAllPosts",
       { withCredentials: true }
     );
     return response.data.postsArr;
@@ -37,10 +37,10 @@ const fetchPosts = createAsyncThunk("posts/getAllPosts", async () => {
   }
 });
 
-const fetchUpdateUsersEvent = createAsyncThunk("posts/updateUsersEvent", async (post:Post) => {
+const fetchUpdateUsersEvent = createAsyncThunk("/posts/updateUsersEvent", async (post:Post) => {
   try {
     const response = await axiosInstance.put(
-      "posts/updateUsersEvent",
+      "/posts/updateUsersEvent",
       {post},
       { withCredentials: true }
     );
@@ -50,10 +50,10 @@ const fetchUpdateUsersEvent = createAsyncThunk("posts/updateUsersEvent", async (
   }
 });
 
-const fetchDeletePost = createAsyncThunk("posts/deletePost", async (postId:string | number) => {
+const fetchDeletePost = createAsyncThunk("/posts/deletePost", async (postId:string | number) => {
   try {
     const response = await axiosInstance.put(
-      "posts/deletePost",
+      "/posts/deletePost",
       {postId},
       { withCredentials: true }
     );

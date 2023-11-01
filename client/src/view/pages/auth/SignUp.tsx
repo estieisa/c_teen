@@ -53,7 +53,7 @@ export default function SignUp() {
         user.getIdToken().then((token) => {
           axiosInstance({
             method: "post",
-            url: "users/signUp",
+            url: "/users/signUp",
             data,
             withCredentials: true,
             headers: { Authorization: "Bearer " + token },
