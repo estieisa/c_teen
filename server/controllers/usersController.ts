@@ -27,7 +27,7 @@ export const signInUser = async (req: any, res: Response) => {
           }
         );
 
-      const isAdmin = await checkAdminStatus(req);
+      // const isAdmin = await checkAdminStatus(req);
       // res.end(JSON.stringify({ status: "login successfully", isAdmin }));
     }
   } catch (err) {
