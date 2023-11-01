@@ -1,20 +1,17 @@
 import express from "express";
 import cors from "cors";
-import admin from "firebase-admin";
+import admin, { ServiceAccount } from "firebase-admin";
 import bodyParser from "body-parser";
 import cookieParser from 'cookie-parser'
 // import { googleMaps } from "./Controllers/FetchApi";
 import { instagramPosts } from "./controllers/fetchApi";
-import path from "path";
 require("dotenv").config();
-const serviceAccount = require("./firebasecreds.json");
-// import Post from 
 
 
 const app = express();
 const port = process.env.PORT;
 
-
+const serviceAccount = JSON.parse(process.env.SERVICE_ACCOUNT as string) 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   storageBucket: process.env.STORAGE_BUCKET,

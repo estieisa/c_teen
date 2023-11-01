@@ -30,7 +30,7 @@ Follow the on-screen instructions to set up your Firebase Storage bucket.
 
 Client-Side Firebase Setup:
 
-1. Initialize Firebase in your app. You'll find the Firebase configuration object in your Firebase project settings (Project settings > General > Your apps > Firebase SDK snippet > Config). Store this configuration object in your client application's .env file in the client/my-app folder. for safe and secure access. Use the following format in your .env file: REACT_APP_FIREBASE_CONFIG=<your-firebase-config-object>   
+1. Initialize Firebase in your app. You'll find the Firebase configuration object in your Firebase project settings (Project settings > General > Your apps > Firebase SDK snippet > Config). Store this configuration object in your client application's .env file in the client folder. for safe and secure access. Use the following format in your .env file: REACT_APP_FIREBASE_CONFIG=<your-firebase-config-object>   
 Replace <your-firebase-config-object> with the actual configuration object you copied. In one line and in JSON string - {"apiKey": "your-api-key", "authDomain": "your-project.firebaseapp.com", ...}
 
 
@@ -40,7 +40,8 @@ Server-Side Firebase Setup:
 To authenticate your server with Firebase, you'll need a service account key JSON file. Here's how to obtain it:
 (Firebase Console > your project > Project Settings > Service accounts > Generate new private key).
 This will download a JSON file containing the service account key, which is used to authenticate your server with Firebase. Keep this file safe and never share it publicly.
-Add the file in the server folder under the name firebasecreds.json.
+Store this configuration object in your server application's .env file in the server folder. for safe and secure access. Use the following format in your .env file: SERVICE_ACCOUNT=<your-firebase-config-object>   
+Replace <your-firebase-config-object> with the actual configuration object you copied. In one line and in JSON string - {"apiKey": "your-api-key", "authDomain": "your-project.firebaseapp.com", ...}
 
 2. To set your Firebase Storage bucket URL, you need to obtain the URL for your specific Firebase project's storage bucket from the Firebase Console. Follow these steps:
 (Firebase Console > Firebase project > project settings > Storage > Under the "Rules" tab, you can see your Firebase Storage bucket URL. It will look something like this: gs://your-project-id.appspot.com).
