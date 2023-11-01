@@ -4,9 +4,9 @@ import { authorizationUser, authorizationAdmin } from '../middleWare/authorizati
 import { upload } from '../middleWare/multerStorage';
 
 router
-    .post('/SignIn', signInUser)
-    .post('/SignUp', upload.single("image"), signUpUser)
-    .get('/UserProfile', authorizationUser,  userProfile)
+    .post('/signIn', signInUser)
+    .post('/signUp', upload.single("image"), signUpUser)
+    .get('/userProfile', authorizationUser,  userProfile)
     .post('/signOutUser',authorizationUser, signOutUser)
     .get('/getAllUsers', authorizationAdmin,  getAllUsers)
     .post('/resetPassword', resetPassword)

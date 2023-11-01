@@ -16,7 +16,7 @@ function ResetPassword() {
     event.preventDefault();
 
     await axiosInstance
-      .post("https://c-teen-api.vercel.app/users/resetPassword", { email })
+      .post("/api/users/resetPassword", { email })
       .then((res) => {
         if (res.data) {
           toast.success(res.data);

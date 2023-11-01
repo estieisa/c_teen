@@ -34,7 +34,7 @@ export default function SignIn() {
         user.getIdToken().then((token) => {
           axiosInstance({
             method: "post",
-            url: "https://c-teen-api.vercel.app/users/SignIn",
+            url: "/api/users/signIn",
             data: user,
             withCredentials: true,
             headers: { Authorization: "Bearer " + token },

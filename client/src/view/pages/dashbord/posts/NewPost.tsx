@@ -56,7 +56,7 @@ export default function NewPost() {
     }
 
     axiosInstance
-      .post("https://c-teen-api.vercel.app/posts/newPost", data, {
+      .post("/api/posts/newPost", data, {
         withCredentials: true,
       })
       .then((res) => {

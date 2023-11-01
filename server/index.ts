@@ -5,8 +5,10 @@ import bodyParser from "body-parser";
 import cookieParser from 'cookie-parser'
 // import { googleMaps } from "./Controllers/FetchApi";
 import { instagramPosts } from "./controllers/fetchApi";
+import path from "path";
 require("dotenv").config();
 const serviceAccount = require("./firebasecreds.json");
+// import Post from 
 
 
 const app = express();
@@ -28,17 +30,17 @@ app.use(bodyParser.json());
 app.use(
   cors({
     credentials: true,
-    origin: 'https://c-teen.vercel.app',
+    origin: ['https://c-teen.vercel.app', 'http://localhost:3000'],
     maxAge: 2592000,
     allowedHeaders:"Access-Control-Allow-Origin"
   })
 );
 
 
-app.use("/users", require("./Router/usersRout"));
-app.use("/posts", require("./Router/postsRout"));
+app.use("/api/users", require("./Router/usersRout"));
+app.use("/api/posts", require("./Router/postsRout"));
 // app.use('/serpapi-locations', googleMaps)
-app.use('/instagram-posts', instagramPosts)
+app.use('/api/instagram-posts', instagramPosts)
 
 
 app.listen(port, () => {
