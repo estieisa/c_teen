@@ -31,6 +31,7 @@ const fetchPosts = createAsyncThunk("/posts/getAllPosts", async () => {
       "/posts/getAllPosts",
       { withCredentials: true }
     );
+    console.log(response.data.postsArr)
     return response.data.postsArr;
   } catch (error) {
     throw error;
