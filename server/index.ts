@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import admin, { ServiceAccount } from "firebase-admin";
+import admin from "firebase-admin";
 import bodyParser from "body-parser";
 import cookieParser from 'cookie-parser'
 // import { googleMaps } from "./Controllers/FetchApi";
@@ -24,21 +24,14 @@ export const bucket = admin.storage().bucket();
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-// app.use(
-//   cors({
-//     credentials: true,
-//     origin: ['https://c-teen.vercel.app', 'http://localhost:3000', 'https://c-teen.vercel.app/api/posts/getAllPosts', 'https://c-teen.vercel.app/api/instagram-posts'],
-//     maxAge: 2592000,
-//     allowedHeaders:"Access-Control-Allow-Origin"
-//   })
-// );
-
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://c-teen.vercel.app/api/instagram-posts');
-  res.header('Access-Control-Allow-Credentials', 'true');
-  // Add other necessary headers as needed
-  next();
-});
+app.use(
+  cors({
+    credentials: true,
+    origin: ['https://c-teen.vercel.app', 'http://localhost:3000'],
+    maxAge: 2592000,
+    allowedHeaders:"Access-Control-Allow-Origin"
+  })
+);
 
 
 app.use("/api/posts", require("./router/postsRout"));
