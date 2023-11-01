@@ -34,7 +34,6 @@ app.use(
 );
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://c-teen.vercel.app/api/posts/getAllPosts');
   res.header('Access-Control-Allow-Origin', 'https://c-teen.vercel.app/api/instagram-posts');
   res.header('Access-Control-Allow-Credentials', 'true');
   // Add other necessary headers as needed
