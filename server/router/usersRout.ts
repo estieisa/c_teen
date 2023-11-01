@@ -1,5 +1,5 @@
 const router = require('express').Router();
-import {resetPassword, signInUser, signOutUser, signUpUser, updateEventsUser, userProfile, deleteEventUser, updateUser, getAllUsers, deleteUser} from '../Controllers/UsersController' 
+import {resetPassword, signInUser, signOutUser, signUpUser, updateEventsUser, userProfile, deleteEventUser, updateUser, getAllUsers, deleteUser} from '../controllers/usersController' 
 import { authorizationUser, authorizationAdmin } from '../middleWare/authorization';
 import { upload } from '../middleWare/multerStorage';
 
