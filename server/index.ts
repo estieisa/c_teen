@@ -34,8 +34,8 @@ app.use(
 );
 
 
-app.use("/api/users", require("./Router/usersRout"));
-app.use("/api/posts", require("./Router/postsRout"));
+app.use("/api/users", require("./router/usersRout"));
+app.use("/api/posts", require("./router/postsRout"));
 // app.use('/serpapi-locations', googleMaps)
 app.use('/api/instagram-posts', instagramPosts)
 
