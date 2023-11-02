@@ -52,7 +52,7 @@ app.get('*', (req, res) => {
 // app.use("/api/posts", require("./router/postsRout"));
 // app.use("/api/users", require("./router/usersRout"));
 // app.use('/serpapi-locations', googleMaps)
-// app.use('/api/instagram-posts', instagramPosts)
+app.use('/api/instagram-posts', instagramPosts)
 
 
 app.listen(port, () => {
