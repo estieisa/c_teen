@@ -19,6 +19,7 @@ export default function InstagramPosts() {
     try {
       const response = await axios.get("https://c-teen.vercel.app/api/instagram-posts");
       setPosts(response.data.data);
+      console.log(response.data)
     } catch (error) {
       console.error("Error fetching locations:", error);
     }

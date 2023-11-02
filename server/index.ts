@@ -41,18 +41,15 @@ app.use(express.static(path.join(__dirname, '../client/build')));
 // API routes
 const postsRout = require("./router/postsRout");
 const usersRout = require("./router/usersRout");
-app.use('/api', postsRout, usersRout);
+const instagramRout = require("./router/instagramRout");
+app.use('/api', postsRout, usersRout, instagramRout);
 
 // Serve the React app for any other route
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/public/index.html'));
 });
 
-
-// app.use("/api/posts", require("./router/postsRout"));
-// app.use("/api/users", require("./router/usersRout"));
 // app.use('/serpapi-locations', googleMaps)
-app.use('/api/instagram-posts', instagramPosts)
 
 
 app.listen(port, () => {
