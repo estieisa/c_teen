@@ -45,7 +45,7 @@ app.use('/api', postsRout, usersRout);
 
 // Serve the React app for any other route
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  res.sendFile(path.join(__dirname, '../client/public/index.html'));
 });
 
 
