@@ -29,7 +29,8 @@ app.use(
     credentials: true,
     origin: ['https://c-teen-mg3c.vercel.app', 'http://localhost:3000'],
     maxAge: 2592000,
-    allowedHeaders:"Access-Control-Allow-Origin"
+    methods: 'GET,POST', // Specify the allowed HTTP methods
+    allowedHeaders: 'Content-Type', // Specify the allowed headers
   })
 );
 
