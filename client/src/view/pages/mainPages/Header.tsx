@@ -69,7 +69,7 @@ export default function Header() {
   }, [auth.loggedIn, dispatch]);
 
   const [selectedComponent, setSelectedComponent] = useState<JSX.Element>(
-    <SignUp/>
+    <ResetPassword/>
   );
   console.log(selectedComponent)
   const [open, setOpen] = useState(false);
@@ -302,7 +302,7 @@ export default function Header() {
                     <Grid container justifyContent="center">
                       <Grid item>
                         <h1>reset PASSWORD</h1>
-                        {selectedComponent.type.name === "SignIn" && (
+                        {selectedComponent.type.name === "Uy" && (
                           <>
                         <h1>reset PASSWORD</h1>
                             <Grid
@@ -335,7 +335,7 @@ export default function Header() {
                             </Grid>
                           </>
                         )}
-                        {selectedComponent.type.name === "SignUp" && (
+                        {selectedComponent.type.name === "By" && (
                           <Link
                             style={{ fontSize: 13, color: "black" }}
                             to="#"
