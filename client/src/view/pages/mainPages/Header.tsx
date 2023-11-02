@@ -69,7 +69,7 @@ export default function Header() {
   }, [auth.loggedIn, dispatch]);
 
   const [selectedComponent, setSelectedComponent] = useState<JSX.Element>(
-    <ResetPassword/>
+    <SignIn/>
   );
   console.log(selectedComponent)
   const [open, setOpen] = useState(false);
@@ -344,7 +344,7 @@ export default function Header() {
                             כבר יש לך חשבון? התחבר
                           </Link>
                         )}
-                        {selectedComponent.type.name === "ResetPassword" && (
+                        {selectedComponent.type.name === "XL" && (
                           <Link
                             style={{ fontSize: 13, color: "black" }}
                             to="#"
