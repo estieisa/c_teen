@@ -22,8 +22,10 @@ export const signInUser = async (req: any, res: Response) => {
             // const options = { maxAge: expiresIn, httpOnly: true, secure: true};
             // res.cookie("session", sessionCookie, options);
             res.cookie('session', sessionCookie, {
-              secure: true, // Set to true for production, false for development
-              sameSite: 'none', // Allows cookies in cross-origin requests
+              secure: true, 
+              sameSite: 'none', 
+              maxAge:expiresIn,
+              httpOnly:true
             });
           },
           (error) => {
