@@ -42,7 +42,7 @@ export default function InstagramPosts() {
         </Link>
       </Box>
 
-      <ImageList variant="masonry"  cols={4} gap={20}>
+      <ImageList variant="masonry"  cols={3} gap={10}>
         {posts.map((post) => (
           <ImageListItem
             key={post.media_url}
