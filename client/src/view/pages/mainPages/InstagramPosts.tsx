@@ -42,7 +42,7 @@ export default function InstagramPosts() {
         </Link>
       </Box>
 
-      <ImageList variant="masonry" cols={7} gap={5}>
+      <ImageList variant="masonry"  cols={4} gap={20}>
         {posts.map((post) => (
           <ImageListItem
             key={post.media_url}
@@ -67,7 +67,7 @@ export default function InstagramPosts() {
                     }}
                   >
                 <Typography variant="caption" color={'white'}>
-                      {`${post.caption.split(" ").slice(0, 10).join(" ")}...`}
+                      {`${post.caption.split(" ").slice(0, 5).join(" ")}...`}
                     </Typography>
                   </div>
                 )}

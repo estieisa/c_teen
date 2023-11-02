@@ -28,9 +28,8 @@ export const instagramPosts = async (req: Request, res: Response) => {
     }
 
     const response = await axios.get(
-      `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,thumbnail_url,timestamp&access_token=${tokenInstagram}&limit=26`
+      `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,thumbnail_url,timestamp&access_token=${tokenInstagram}&limit=16`
     );
-
     res.json(response.data);
   } catch (error) {
     console.error("Error:", error);
