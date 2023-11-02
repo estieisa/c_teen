@@ -297,7 +297,7 @@ export default function Header() {
                       p: 4,
                     }}
                   >
-                    {/* {selectedComponent} */}
+                    {selectedComponent}
                     <Grid container justifyContent="center">
                       <Grid item>
                         {selectedComponent.type.name === "SignIn" && (
