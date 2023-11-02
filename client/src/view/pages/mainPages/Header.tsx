@@ -301,10 +301,8 @@ export default function Header() {
                     {selectedComponent}
                     <Grid container justifyContent="center">
                       <Grid item>
-                        <h1>reset PASSWORD</h1>
                         {selectedComponent.type.name === "Uy" && (
                           <>
-                        <h1>reset PASSWORD</h1>
                             <Grid
                               container
                               spacing={15}
