@@ -104,12 +104,12 @@ export default function Header() {
 
   const handleButtonClick = () => {
     setOpen(true);
-    setSelectedComponent(<SignIn />);
+    setSelectedComponent(<SignIn/>);
   };
 
   const handleCloseModal = () => {
     setOpen(false);
-    setSelectedComponent(<SignIn />);
+    setSelectedComponent(<SignIn/>);
   };
   const handleComponentChange = (component: any) => {
     setSelectedComponent(component);
@@ -297,7 +297,7 @@ export default function Header() {
                       p: 4,
                     }}
                   >
-                    {selectedComponent}
+                    {/* {selectedComponent} */}
                     <Grid container justifyContent="center">
                       <Grid item>
                         {selectedComponent.type.name === "SignIn" && (
@@ -312,7 +312,7 @@ export default function Header() {
                                   style={{ color: "black" }}
                                   to="#"
                                   onClick={() =>
-                                    handleComponentChange(<ResetPassword />)
+                                    handleComponentChange(<ResetPassword/>)
                                   }
                                 >
                                   שכחת סיסמא?
@@ -323,7 +323,7 @@ export default function Header() {
                                   style={{ color: "black" }}
                                   to="#"
                                   onClick={() =>
-                                    handleComponentChange(<SignUp />)
+                                    handleComponentChange(<SignUp/>)
                                   }
                                 >
                                   אין לך חשבון? הרשם כאן
