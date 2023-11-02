@@ -19,8 +19,12 @@ export const signInUser = async (req: any, res: Response) => {
           (sessionCookie) => {
             req.cookies.session = sessionCookie;
             // Set cookie policy for session cookie.
-            const options = { maxAge: expiresIn, httpOnly: true, secure: true };
-            res.cookie("session", sessionCookie, options);
+            // const options = { maxAge: expiresIn, httpOnly: true, secure: true};
+            // res.cookie("session", sessionCookie, options);
+            res.cookie('session', sessionCookie, {
+              secure: true, // Set to true for production, false for development
+              sameSite: 'none', // Allows cookies in cross-origin requests
+            });
           },
           (error) => {
             res.status(401).send("unauthorization");
