@@ -4,16 +4,16 @@ import { authorizationUser, authorizationAdmin } from '../middleWare/authorizati
 import { upload } from '../middleWare/multerStorage';
 
 router
-    .post('/signIn', signInUser)
-    .post('/signUp', upload.single("image"), signUpUser)
-    .get('/userProfile', authorizationUser,  userProfile)
-    .post('/signOutUser',authorizationUser, signOutUser)
-    .get('/getAllUsers', authorizationAdmin,  getAllUsers)
-    .post('/resetPassword', resetPassword)
-    .put('/updateEventsUser', authorizationUser, updateEventsUser)
-    .put('/updateUser', authorizationUser, upload.single("image"), updateUser)
-    .put('/deleteEventUser', authorizationUser, deleteEventUser)
-    .put('/deleteUser', authorizationAdmin, deleteUser)
+    .post('/users/signIn', signInUser)
+    .post('/users/signUp', upload.single("image"), signUpUser)
+    .get('/users/userProfile', authorizationUser,  userProfile)
+    .post('/users/signOutUser',authorizationUser, signOutUser)
+    .get('/users/getAllUsers', authorizationAdmin,  getAllUsers)
+    .post('/users/resetPassword', resetPassword)
+    .put('/users/updateEventsUser', authorizationUser, updateEventsUser)
+    .put('/users/updateUser', authorizationUser, upload.single("image"), updateUser)
+    .put('/users/deleteEventUser', authorizationUser, deleteEventUser)
+    .put('/users/deleteUser', authorizationAdmin, deleteUser)
 
 
 module.exports = router;

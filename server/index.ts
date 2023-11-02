@@ -3,10 +3,10 @@ import cors from "cors";
 import admin from "firebase-admin";
 import bodyParser from "body-parser";
 import cookieParser from 'cookie-parser'
+import path from "path";
+require('dotenv').config()
 // import { googleMaps } from "./Controllers/FetchApi";
 import { instagramPosts } from "./controllers/fetchApi";
-require("dotenv").config();
-
 
 const app = express();
 const port = process.env.PORT;
@@ -34,10 +34,24 @@ app.use(
 );
 
 
-app.use("/api/posts", require("./router/postsRout"));
-app.use("/api/users", require("./router/usersRout"));
+// Serve static files from the 'client/build' directory
+app.use(express.static(path.join(__dirname, '../client/build')));
+
+// API routes
+const postsRout = require("./router/postsRout");
+const usersRout = require("./router/usersRout");
+app.use('/api', postsRout, usersRout);
+
+// Serve the React app for any other route
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
+
+// app.use("/api/posts", require("./router/postsRout"));
+// app.use("/api/users", require("./router/usersRout"));
 // app.use('/serpapi-locations', googleMaps)
-app.use('/api/instagram-posts', instagramPosts)
+// app.use('/api/instagram-posts', instagramPosts)
 
 
 app.listen(port, () => {

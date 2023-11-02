@@ -4,10 +4,10 @@ import { authorizationAdmin, authorizationUser } from "../middleWare/authorizati
 import { upload } from "../middleWare/multerStorage";
 
 router
-  .post("/newPost", authorizationAdmin, upload.single("image"), newPost)
-  .get("/getAllPosts",  getAllPosts)
+  .post("/posts/newPost", authorizationAdmin, upload.single("image"), newPost)
+  .get("/posts/getAllPosts",  getAllPosts)
   // .get("/getPost", authorizationAdmin, getPost)
-  .put("/updateUsersEvent", authorizationUser, updatePostUsers)
-  .put("/deletePost", authorizationUser, deletePost);
+  .put("/posts/updateUsersEvent", authorizationUser, updatePostUsers)
+  .put("/posts/deletePost", authorizationUser, deletePost);
 
 module.exports = router;
