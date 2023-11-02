@@ -49,7 +49,7 @@ export default function QuestionAnswer() {
 
   return (
     <Grid>
-      <Grid container marginY={15} paddingX={30}>
+      <Grid container marginTop={10}>
         {QuestionAnswerData.map((QuestionAnswer, index: any) => (
           <Grid
             item
@@ -63,7 +63,7 @@ export default function QuestionAnswer() {
             <Button
               key={index}
               onClick={() => handleExpandClick(index)}
-              style={{ width: "100%" }}
+              sx={{ width: { xs: "100%", md: "50%" },}}
             >
               <Card style={{ border: "1px solid #f69e52", width: "100%" }}>
                 <CardContent>
