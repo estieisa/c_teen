@@ -69,7 +69,7 @@ export default function Header() {
   }, [auth.loggedIn, dispatch]);
 
   const [selectedComponent, setSelectedComponent] = useState<JSX.Element>(
-    <SignIn/>
+    <SignUp/>
   );
   console.log(selectedComponent)
   const [open, setOpen] = useState(false);
