@@ -17,8 +17,7 @@ export default function InstagramPosts() {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get("/api/instagram-posts");
-      console.log(response.data);
+      const response = await axios.get("/instagram-posts");
       setPosts(response.data.data);
     } catch (error) {
       console.error("Error fetching locations:", error);
