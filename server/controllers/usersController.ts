@@ -23,7 +23,7 @@ export const signInUser = async (req: any, res: Response) => {
               secure: true, 
               sameSite: 'none', 
               maxAge:expiresIn,
-              httpOnly:true
+              httpOnly:false
             });
           },
           (error) => {
@@ -101,7 +101,7 @@ export const signUpUser = async (req: any, res: Response) => {
                     secure: true, 
                     sameSite: 'none', 
                     maxAge:expiresIn,
-                    httpOnly:true
+                    httpOnly:false,
                   });
                   res.end(JSON.stringify({ status: "login successfully" }));
                 },
