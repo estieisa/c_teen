@@ -10,34 +10,24 @@ import {
 export default function QuestionAnswer() {
   const QuestionAnswerData = [
     {
-      question: "What are the best flowers for a wedding bouquet?",
+      question: "מה זה CTeen?",
       answer:
-        "Popular choices for wedding bouquets include roses, peonies, lilies, and hydrangeas.",
+        "הוא ארגון בינלאומי הפועל לחינוך הנוער היהודי, כזרוע של המרכז לעניני חינוך שבניו יורק. בארגון חברים למעלה מ-100,000 בני נוער ברחבי העולם, 630 מרכזים הפזורים ב-44 מדינות. הארגון נחשב לתנועת הנוער היהודי הצומחת והמגוונת ביותר בעולם.",
     },
     {
-      question: "How can I preserve the freshness of cut flowers?",
+      question: "מה הפעילויות שיש בחבד לנוער?",
       answer:
-        "To keep cut flowers fresh, trim stems, change water every few days, and avoid placing them in direct sunlight or near drafts.",
+        "מלבד הפעילויות סביב מעגל השנה, המופעלות על ידי כל סניף באופן פרטי, מפעיל הארגון מספר תכניות שנתיות המיועדות לכלל הסניפים, ביניהם: CTeen International Sabbaton - שבתון בני הנוער העולמי של ארגון הנוער היהודי, הינו סוף שבוע שנתי המאגד אלפי בני נוער מרחבי העולם המתקיים בשכונת קראון הייטס. CTeen XTREME - 'סי-טן אקסטרים', מחנה קיץ אתגרי בו החניכים מאתגרים את עצמם פיזית ורוחנית על ידי השתתפות בספורט אתגרי, שמירת שבת נטולת טכנולוגיה לחלוטין ושמירה על כשרות בדרכים.",
     },
     {
-      question: "What flowers are suitable for a garden in full sunlight?",
+      question: "מי הרב והרבנית בסניף חדרה?",
       answer:
-        "Sun-loving flowers include sunflowers, marigolds, petunias, and zinnias, among others.",
+        "הרב אלי ומושקא לוין",
     },
     {
-      question: "Which flowers are known for their fragrance?",
+      question: "איך אני יכול/ה להרשם לסניף?",
       answer:
-        "Fragrant flowers include roses, jasmine, lavender, and gardenias, renowned for their delightful scents.",
-    },
-    {
-      question: "What flowers are suitable for a garden in full sunlight?",
-      answer:
-        "Sun-loving flowers include sunflowers, marigolds, petunias, and zinnias, among others.",
-    },
-    {
-      question: "Which flowers are known for their fragrance?",
-      answer:
-        "Fragrant flowers include roses, jasmine, lavender, and gardenias, renowned for their delightful scents.",
+    "צור קשר עם הרב או הרבנית של הסניף שלך"
     },
   ];
 
