@@ -22,12 +22,12 @@ import { auth } from "../../../firebase/firebase-config";
 import axiosInstance from "../../../axiosInstance";
 
 export default function SignUp() {
+
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
-  const dispatch = useAppDispatch();
-  //state
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [grade, setGrade] = useState("");
@@ -35,7 +35,6 @@ export default function SignUp() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [image, setImage] = useState("");
 
-  //handleSubmit
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     const data = new FormData();

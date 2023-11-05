@@ -1,24 +1,31 @@
 import React, { useState } from "react";
-import { Box,Typography, TextField, Button, Grid } from "@mui/material";
+import { Box, Typography, TextField, Button, Grid } from "@mui/material";
+
+interface FormData {
+  name: string;
+  phone: string;
+  email: string;
+  message: string;
+}
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     phone: "",
     email: "",
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
     setFormData({
       ...formData,
       [name]: value,
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
     console.log(formData);
   };
 
@@ -43,9 +50,12 @@ export default function ContactForm() {
           צור קשר
         </Typography>
       </Box>
-  
-        <Box display={"flex"} justifyContent={"center"} >
-      <form onSubmit={handleSubmit} style={{width:600, height:300, position: 'relative', zIndex: 1}} >
+
+      <Box display={"flex"} justifyContent={"center"}>
+        <form
+          onSubmit={handleSubmit}
+          style={{ width: 600, height: 300, position: "relative", zIndex: 1 }}
+        >
           <Box>
             <TextField
               fullWidth
@@ -55,9 +65,8 @@ export default function ContactForm() {
               onChange={handleChange}
               margin="normal"
               size="small"
-              // variant="filled"
               color="primary"
-              sx={{backgroundColor:'white'}}
+              sx={{ backgroundColor: "white" }}
             />
             <TextField
               fullWidth
@@ -67,8 +76,7 @@ export default function ContactForm() {
               onChange={handleChange}
               margin="normal"
               size="small"
-              sx={{backgroundColor:'white'}}
-
+              sx={{ backgroundColor: "white" }}
             />
             <TextField
               fullWidth
@@ -78,8 +86,7 @@ export default function ContactForm() {
               onChange={handleChange}
               margin="normal"
               size="small"
-              sx={{backgroundColor:'white'}}
-
+              sx={{ backgroundColor: "white" }}
             />
             <TextField
               fullWidth
@@ -91,32 +98,32 @@ export default function ContactForm() {
               multiline
               rows={4}
               size="small"
-              sx={{backgroundColor:'white'}}
+              sx={{ backgroundColor: "white" }}
             />
             <Button
               fullWidth
               type="submit"
               variant="contained"
               size="small"
-
-              sx={{backgroundColor:"#f69e52"}}
+              sx={{ backgroundColor: "#f69e52" }}
             >
               צור קשר
             </Button>
           </Box>
-      </form>
-        </Box>
-        <div
-  style={{
-    backgroundColor: "#53cefc",
-    opacity: 0.1,
-    width: "100%",
-    height: "40%", 
-    position: "absolute",
-    bottom: 0,  
-    left: 0,
-    zIndex:0
-  }}></div>
+        </form>
+      </Box>
+      <div
+        style={{
+          backgroundColor: "#53cefc",
+          opacity: 0.1,
+          width: "100%",
+          height: "40%",
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          zIndex: 0,
+        }}
+      ></div>
     </Grid>
   );
 }

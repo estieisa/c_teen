@@ -1,5 +1,5 @@
 import * as React from "react";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   Avatar,
   Button,
@@ -12,10 +12,10 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { toast } from "react-toastify";
 import { signInWithEmailAndPassword,  } from "firebase/auth";
 import { auth } from "../../../firebase/firebase-config";
-import SignInWithGoogle from "./SignInWithGoogle";
 import { useAppDispatch } from "../../../redux/hooks";
 import { login, setAdmin } from "../../../redux/authSlice";
 import axiosInstance from "../../../axiosInstance";
+import SignInWithGoogle from "./SignInWithGoogle";
 
 export default function SignIn() {
   const navigate = useNavigate();

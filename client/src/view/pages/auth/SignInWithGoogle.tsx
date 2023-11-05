@@ -58,7 +58,7 @@ export default function SignInWithGoogle() {
         variant="outlined"
         sx={{ mt: 3, mb: 2, color: "black", border: "1px solid black" }}
       >
-        Sign In With Google
+        SIGN IN WITH GOOGLE
       </Button>
     </>
   );

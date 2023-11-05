@@ -19,11 +19,9 @@ export const signInUser = async (req: any, res: Response) => {
           (sessionCookie) => {
             req.cookies.session = sessionCookie;
             // Set cookie policy for session cookie.
-            // const options = { maxAge: expiresIn, httpOnly: true, secure: true};
-            // res.cookie("session", sessionCookie, options);
             res.cookie('session', sessionCookie, {
               secure: true, 
-              sameSite: 'none', 
+              sameSite: 'lax', 
               maxAge:expiresIn,
               httpOnly:true
             });
@@ -99,12 +97,12 @@ export const signUpUser = async (req: any, res: Response) => {
               .then(
                 (sessionCookie) => {
                   // Set cookie policy for session cookie.
-                  const options = {
-                    maxAge: expiresIn,
-                    httpOnly: true,
-                    secure: true,
-                  };
-                  res.cookie("session", sessionCookie, options);
+                  res.cookie('session', sessionCookie, {
+                    secure: true, 
+                    sameSite: 'lax', 
+                    maxAge:expiresIn,
+                    httpOnly:true
+                  });
                   res.end(JSON.stringify({ status: "login successfully" }));
                 },
                 (error) => {
