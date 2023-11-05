@@ -21,7 +21,7 @@ export const signInUser = async (req: any, res: Response) => {
             // Set cookie policy for session cookie.
             res.cookie('session', sessionCookie, {
               secure: true, 
-              sameSite: 'lax', 
+              sameSite: 'none', 
               maxAge:expiresIn,
               httpOnly:true
             });
@@ -99,7 +99,7 @@ export const signUpUser = async (req: any, res: Response) => {
                   // Set cookie policy for session cookie.
                   res.cookie('session', sessionCookie, {
                     secure: true, 
-                    sameSite: 'lax', 
+                    sameSite: 'none', 
                     maxAge:expiresIn,
                     httpOnly:true
                   });
