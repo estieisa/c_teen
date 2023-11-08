@@ -60,15 +60,6 @@ function ServerDay(props: PickersDayProps<Dayjs> & { events: Post[] }) {
   }, [listEvent, props.day]);
 
   const isEventDay = eventsForDay.length > 0;
-  // const [isTooltipOpen, setIsTooltipOpen] = useState(false);
-
-  // const handleTooltipOpen = useCallback(() => {
-  //   setIsTooltipOpen(true);
-  // }, []);
-
-  // const handleTooltipClose = useCallback(() => {
-  //   setIsTooltipOpen(false);
-  // }, []);
 
   return (
     <Tooltip
