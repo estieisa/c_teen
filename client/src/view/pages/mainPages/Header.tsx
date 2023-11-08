@@ -300,7 +300,7 @@ export default function Header() {
                     {selectedComponent}
                     <Grid container justifyContent="center">
                       <Grid item>
-                        {selectedComponent.type.name === "Uy" || selectedComponent.type.name ===  "SignIn" && (
+                        {(selectedComponent.type.name === "Uy" || selectedComponent.type.name ===  "SignIn") && (
                           <>
                             <Grid
                               container
@@ -332,7 +332,7 @@ export default function Header() {
                             </Grid>
                           </>
                         )}
-                        {selectedComponent.type.name === "By" || selectedComponent.type.name === "SignUp"  && (
+                        {(selectedComponent.type.name === "By" || selectedComponent.type.name === "SignUp")  && (
                           <Link
                             style={{ fontSize: 13, color: "black" }}
                             to="#"
@@ -341,7 +341,7 @@ export default function Header() {
                             כבר יש לך חשבון? התחבר
                           </Link>
                         )}
-                        {selectedComponent.type.name === "XL" || selectedComponent.type.name === "ResetPassword"  && (
+                        {(selectedComponent.type.name === "XL" || selectedComponent.type.name === "ResetPassword")  && (
                           <Link
                             style={{ fontSize: 13, color: "black" }}
                             to="#"
