@@ -37,11 +37,11 @@ export default function Router() {
           <Route path="post" element={<PostByCategory />} />
 
           {/* Auth-protected routes */}
-          <Route element={<AuthProtectedRoute />}>
+          {/* <Route element={<AuthProtectedRoute />}> */}
             <Route path="user-profile" element={<UserProfile />} />
             <Route path="sign-out" element={<SignOut />} />
           </Route>
-        </Route>
+        {/* </Route> */}
 
         {/* Dashboard-protected routes */}
         <Route element={<DashboardProtectedRoute />}>
