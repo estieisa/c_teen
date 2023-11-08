@@ -37,6 +37,15 @@ const initialValue = dayjs(new Date());
 
 function ServerDay(props: PickersDayProps<Dayjs> & { events: Post[] }) {
   const { events, day, outsideCurrentMonth, ...other } = props;
+  const [open, setOpen] = useState(false);
+
+  const handleTooltipClose = () => {
+    setOpen(false);
+  };
+
+  const handleTooltipOpen = () => {
+    setOpen(true);
+  };
 
   const listEvent = useMemo(() => {
     return events.map((event) => ({
@@ -51,11 +60,11 @@ function ServerDay(props: PickersDayProps<Dayjs> & { events: Post[] }) {
   }, [listEvent, props.day]);
 
   const isEventDay = eventsForDay.length > 0;
-  const [isTooltipOpen, setIsTooltipOpen] = useState(false);
+  // const [isTooltipOpen, setIsTooltipOpen] = useState(false);
 
-  const handleTooltipOpen = useCallback(() => {
-    setIsTooltipOpen(true);
-  }, []);
+  // const handleTooltipOpen = useCallback(() => {
+  //   setIsTooltipOpen(true);
+  // }, []);
 
   // const handleTooltipClose = useCallback(() => {
   //   setIsTooltipOpen(false);
@@ -63,7 +72,8 @@ function ServerDay(props: PickersDayProps<Dayjs> & { events: Post[] }) {
 
   return (
     <Tooltip
-    disableTouchListener
+    onClose={handleTooltipClose}
+    open={open}
       title={
         isEventDay ? (
           <div>
