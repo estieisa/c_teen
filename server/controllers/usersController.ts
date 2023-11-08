@@ -3,7 +3,6 @@ require("dotenv").config();
 import {  Request, Response } from "express";
 import { getAuth } from "firebase-admin/auth";
 import { bucket, db } from "..";
-
 import { checkAdminStatus } from "../middleWare/authorization";
 const expiresIn = 15 * 60 * 60 * 1000; //15 h
 
@@ -23,7 +22,7 @@ export const signInUser = async (req: any, res: Response) => {
               secure: true, 
               sameSite: 'none', 
               maxAge:expiresIn,
-              httpOnly:false
+              httpOnly:true
             });
           },
           (error) => {
@@ -101,7 +100,7 @@ export const signUpUser = async (req: any, res: Response) => {
                     secure: true, 
                     sameSite: 'none', 
                     maxAge:expiresIn,
-                    httpOnly:false,
+                    httpOnly:true,
                   });
                   res.end(JSON.stringify({ status: "login successfully" }));
                 },
