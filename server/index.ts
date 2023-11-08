@@ -30,7 +30,7 @@ app.use(
     origin: ['https://cteen.vercel.app', 'http://localhost:3000'],
     maxAge: 2592000,
     methods: 'GET,POST,PUT,DELETE', // Specify the allowed HTTP methods
-    allowedHeaders: 'Content-Type, Authorization', // Specify the allowed headers
+    // allowedHeaders: 'Content-Type, Authorization', // Specify the allowed headers
   })
 );
 
