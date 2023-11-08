@@ -63,6 +63,7 @@ function ServerDay(props: PickersDayProps<Dayjs> & { events: Post[] }) {
 
   return (
     <Tooltip
+    disableFocusListener
       title={
         isEventDay ? (
           <div>
