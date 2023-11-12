@@ -1,6 +1,6 @@
-// const router = require('express').Router();
-import express from 'express';
-const router = express.Router();
+const router = require('express').Router();
+// import express from 'express';
+// const router = express.Router();
 import {resetPassword, signInUser, signOutUser, signUpUser, updateEventsUser, userProfile, deleteEventUser, updateUser, getAllUsers, deleteUser} from '../controllers/usersController' 
 import { authorizationUser, authorizationAdmin } from '../middleWare/authorization';
 import { upload } from '../middleWare/multerStorage';
