@@ -1,7 +1,7 @@
 import { instagramPosts } from "../controllers/fetchApi";
-
-const router = require('express').Router();
-
+import express from 'express';
+const router = express.Router();
+// const router = require('express').Router();
 
 router
     .get('/instagram-posts',instagramPosts )

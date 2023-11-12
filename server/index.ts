@@ -4,9 +4,11 @@ import admin from "firebase-admin";
 import bodyParser from "body-parser";
 import cookieParser from 'cookie-parser'
 import path from "path";
-require('dotenv').config()
+import dotenv from 'dotenv';
+dotenv.config();
+// require('dotenv').config()
 // import { googleMaps } from "./Controllers/FetchApi";
-import { instagramPosts } from "./controllers/fetchApi";
+// import { instagramPosts } from "./controllers/fetchApi";
 
 const app = express();
 const port = process.env.PORT;
