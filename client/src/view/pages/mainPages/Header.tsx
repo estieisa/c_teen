@@ -333,7 +333,7 @@ export default function Header() {
                             </Grid>
                           </>
                         )}
-                        {(selectedComponent.type.name === "By" || selectedComponent.type.name === "SignUp")  && (
+                        {(selectedComponent.type.name === "Yv" || selectedComponent.type.name === "SignUp")  && (
                           <Link
                             style={{ fontSize: 13, color: "black" }}
                             to="#"
@@ -342,7 +342,7 @@ export default function Header() {
                             כבר יש לך חשבון? התחבר
                           </Link>
                         )}
-                        {(selectedComponent.type.name === "XL" || selectedComponent.type.name === "ResetPassword")  && (
+                        {(selectedComponent.type.name === "uj" || selectedComponent.type.name === "ResetPassword")  && (
                           <Link
                             style={{ fontSize: 13, color: "black" }}
                             to="#"
