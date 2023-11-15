@@ -4,8 +4,8 @@ import admin from "firebase-admin";
 import bodyParser from "body-parser";
 import cookieParser from 'cookie-parser'
 import path from "path";
-require('dotenv').config();
-
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT;
@@ -47,8 +47,6 @@ app.use('/api', postsRout, usersRout, instagramRout);
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/public/index.html'));
 });
-
-// app.use('/serpapi-locations', googleMaps)
 
 
 app.listen(port, () => {
