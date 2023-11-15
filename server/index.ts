@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 app.use(
   cors({
     credentials: true,
-    origin: ['https://cteen.vercel.app', 'http://localhost:3000'],
+    origin: ['https://cteen.vercel.app', 'http://localhost:3000', 'http://localhost:3001'],
     maxAge: 2592000,
     methods: 'GET,POST,PUT,DELETE', // Specify the allowed HTTP methods
     allowedHeaders: 'Content-Type, Authorization', // Specify the allowed headers
