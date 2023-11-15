@@ -1,6 +1,5 @@
 import { Response, Request } from "express";
 import axios from "axios";
-// import dotenv from 'dotenv';
 require('dotenv').config();
 
 export const googleMaps = async (req: Request, res: Response) => {
