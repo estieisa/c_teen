@@ -301,7 +301,7 @@ export default function Header() {
                     {selectedComponent}
                     <Grid container justifyContent="center">
                       <Grid item>
-                        {(selectedComponent.type.name === "Uy" || selectedComponent.type.name ===  "SignIn") && (
+                        {(selectedComponent.type.name === "Xv" || selectedComponent.type.name ===  "SignIn") && (
                           <>
                             <Grid
                               container
