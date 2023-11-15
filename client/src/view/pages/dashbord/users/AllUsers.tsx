@@ -18,7 +18,7 @@ interface UserTable {
   id:string,
   fullName: string,
   email: string,
-  phoneNumber: string ,
+  // phoneNumber: string ,
   gender: string,
   grade: string,
   photoURL: string,
@@ -37,7 +37,7 @@ export default function AllUsers() {
     id:'',
     fullName: '',
     email: '',
-    phoneNumber: '' ,
+    // phoneNumber: '' ,
     gender: '',
     grade: '',
     photoURL: '',
@@ -76,7 +76,7 @@ export default function AllUsers() {
     },
     { field: "fullName", headerName: "שם משתמש", width: 150 },
     { field: "email", headerName: "מייל", width: 180 },
-    { field: "phoneNumber", headerName: "מספר טלפון", width: 150 },
+    // { field: "phoneNumber", headerName: "מספר טלפון", width: 150 },
     {
       field: 'gender',
       headerName: 'מגדר',
@@ -124,13 +124,15 @@ export default function AllUsers() {
 
   useEffect(() => {
     const userDataRows = auth.map((user) => {
-      const { uid, displayName, email, phoneNumber, photoURL , isAdmin} = user.user;
+      const { uid, displayName, email,
+        //  phoneNumber,
+          photoURL , isAdmin} = user.user;
       const { gender, grade } = user;
       return {
         id:uid,
         fullName: displayName,
         email: email,
-        phoneNumber,
+        // phoneNumber,
         gender,
         grade,
         photoURL,

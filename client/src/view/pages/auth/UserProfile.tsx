@@ -23,7 +23,9 @@ export default function UserProfile() {
 
   const auth = useAppSelector((state) => state.auth);
 
-  const { email, phoneNumber, displayName, photoURL } = auth.user.user;
+  const { email,
+    //  phoneNumber,
+      displayName, photoURL } = auth.user.user;
   const { events } = auth.user;
 
   const fileInputRef = useRef<HTMLInputElement | null>(null);
@@ -107,9 +109,9 @@ export default function UserProfile() {
                         <Typography color="text.secondary" variant="body2">
                           {email}
                         </Typography>
-                        <Typography color="text.secondary" variant="body2">
+                        {/* <Typography color="text.secondary" variant="body2">
                           {phoneNumber}
-                        </Typography>
+                        </Typography> */}
                       </Box>
                     </CardContent>
                     <Divider />

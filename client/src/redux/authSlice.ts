@@ -7,7 +7,7 @@ export interface User {
   user: {
     uid: string;
     email: string;
-    phoneNumber: string;
+    // phoneNumber: string;
     displayName: string;
     photoURL: string;
     isAdmin:boolean;
@@ -36,7 +36,7 @@ const initialAuthState: AuthState = {
     user: {
       uid: "",
       email: "",
-      phoneNumber: "",
+      // phoneNumber: "",
       displayName: "",
       photoURL: "",
       isAdmin:false
@@ -139,7 +139,7 @@ const authSlice = createSlice({
         user: {
           uid: '',
           email: '',
-          phoneNumber: '',
+          // phoneNumber: '',
           displayName: '',
           photoURL: '',
           isAdmin: false,

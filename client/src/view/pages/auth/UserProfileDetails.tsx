@@ -24,16 +24,18 @@ export const UserProfileDetails = () => {
   const dispatch = useAppDispatch();
 
   const auth = useAppSelector((state) => state.auth);
-  const { email, phoneNumber, displayName } = auth.user.user;
+  const { email, 
+    // phoneNumber,
+     displayName } = auth.user.user;
   const [firstName, lastName] = displayName.split(" ");
   const { gender, grade, events } = auth.user;
-  const [phoneNumberChange] = useState(phoneNumber);
+  // const [phoneNumberChange] = useState(phoneNumber);
 
   const [values, setValues] = useState({
     firstName: firstName,
     lastName: lastName,
     email: email,
-    phoneNumber: phoneNumberChange,
+    // phoneNumber: phoneNumberChange,
     gender: gender,
     grade: grade,
     events: events,

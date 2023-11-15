@@ -32,7 +32,7 @@ export default function SignUp() {
   const [password, setPassword] = useState("");
   const [grade, setGrade] = useState("");
   const [gender, setGender] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  // const [phoneNumber, setPhoneNumber] = useState("");
   const [image, setImage] = useState("");
 
   const handleSubmit = async (event: any) => {
@@ -43,7 +43,7 @@ export default function SignUp() {
     data.append("grade", grade);
     data.append("gender", gender);
     data.append("image", image);
-    data.append("phoneNumber", event.target.phoneNumber.value);
+    // data.append("phoneNumber", event.target.phoneNumber.value);
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -113,7 +113,7 @@ export default function SignUp() {
                 size="small"
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            {/* <Grid item xs={12} sm={6}>
               <MuiTelInput
                 id="phoneNumber"
                 name="phoneNumber"
@@ -124,8 +124,8 @@ export default function SignUp() {
                 required
                 fullWidth
               />
-            </Grid>
-            <Grid item xs={12} sm={6}>
+            </Grid> */}
+            <Grid item xs={12} sm={12}>
               <TextField
                 type="file"
                 required

@@ -40,7 +40,9 @@ export const signInUser = async (req: any, res: Response) => {
 };
 
 export const signUpUser = async (req: any, res: Response) => {
-  const { phoneNumber, firstName, lastName, gender, grade, userId } = req.body;
+  const { 
+    // phoneNumber,
+     firstName, lastName, gender, grade, userId } = req.body;
   try {
     const file = bucket.file(`usersImages/${req.file.originalname}`);
     // Upload the file to Firebase Storage
@@ -62,7 +64,7 @@ export const signUpUser = async (req: any, res: Response) => {
 
       getAuth()
         .updateUser(userId, {
-          phoneNumber,
+          // phoneNumber,
           displayName: `${firstName} ${lastName}`,
           photoURL: downloadURL,
           disabled: false,
@@ -168,7 +170,7 @@ export const getAllUsers = async (req: any, res: any) => {
           user: {
             uid: authUserData.uid,
             email: authUserData.email,
-            phoneNumber: authUserData.phoneNumber,
+            // phoneNumber: authUserData.phoneNumber,
             displayName: authUserData.displayName,
             photoURL: authUserData.photoURL,
             isAdmin: (await authUserData?.customClaims) ? true : false,
@@ -247,11 +249,13 @@ export const updateUser = async (req: any, res: Response) => {
       });
       stream.end(req.file.buffer);
     } else {
-      const { email, phoneNumber, firstName, lastName, gender, grade, events } =
+      const { email,
+        //  phoneNumber,
+          firstName, lastName, gender, grade, events } =
         data;
       const updateUser = await getAuth().updateUser(userId, {
         email,
-        phoneNumber,
+        // phoneNumber,
         displayName: `${firstName} ${lastName}`,
         disabled: false,
       });
