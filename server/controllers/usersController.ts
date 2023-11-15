@@ -1,5 +1,6 @@
-const nodemailer = require("nodemailer");
-require("dotenv").config();
+import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
+dotenv.config();
 import {  Request, Response } from "express";
 import { getAuth } from "firebase-admin/auth";
 import { bucket, db } from "..";
