@@ -21,6 +21,7 @@ export const googleMaps = async (req: Request, res: Response) => {
 
 export const instagramPosts = async (req: Request, res: Response) => {
   try {
+    console.log(process.env.TOKEN_INSTAGRAM)
     const tokenInstagram = process.env.TOKEN_INSTAGRAM;
 
     // Check if the Instagram token is set
