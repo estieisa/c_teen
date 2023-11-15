@@ -71,7 +71,6 @@ export default function Header() {
   const [selectedComponent, setSelectedComponent] = useState<JSX.Element>(
     <SignIn/>
   );
-  console.log(selectedComponent)
   const [open, setOpen] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
